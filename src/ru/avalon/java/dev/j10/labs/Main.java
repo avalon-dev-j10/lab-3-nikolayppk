@@ -1,9 +1,18 @@
 package ru.avalon.java.dev.j10.labs;
+import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
+import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] array;
+        int [] array = new int[20];
+       Initializer a = new FibonacciInitializer(); 
+       a.initialize(array);
+       System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
+       System.out.println();
+       Initializer b = new RandomInitializer(-50, 50);
+       b.initialize(array);
+       
 
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
@@ -35,4 +44,12 @@ public class Main {
          *    сортировки Шелла.
 	     */
     }
+    // Вычисление суммы элементов массива:
+    static public int getSum(int[] array){
+          int sum = 0;
+           for (int i = 0; i < array.length; i++){
+           sum += array[i]; 
+           }
+           return sum;
+       }
 }
