@@ -1,6 +1,7 @@
 package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
+import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
 
 public class Main {
 
@@ -10,8 +11,14 @@ public class Main {
        a.initialize(array);
        System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
        System.out.println();
+       System.out.println("Массив случайных чисел: ");
        Initializer b = new RandomInitializer(-50, 50);
        b.initialize(array);
+       System.out.println();
+       Sort c = new BubbleSort();
+       System.out.println("Применена пузырьковая сортировка: ");
+       c.sort(array);
+       
        
 
 	    /*

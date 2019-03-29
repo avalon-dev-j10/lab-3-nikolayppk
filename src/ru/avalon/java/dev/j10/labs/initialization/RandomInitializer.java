@@ -32,7 +32,7 @@ public class RandomInitializer implements Initializer {
         for (int i = 0; i < array.length; i++){
             double rand = (int) (Math.random()*(b - a))+ a;
             array[i] = (int)rand;
-            System.out.println(array[i]);
+            System.out.print(array[i] + " ");
         }
         /*
          * TODO(Студент): Реализовать метод initialize класса RandomInitializer
