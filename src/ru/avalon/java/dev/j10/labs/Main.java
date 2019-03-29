@@ -3,6 +3,7 @@ import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
 import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
+import ru.avalon.java.dev.j10.labs.sort.ShellSort;
 
 public class Main {
 
@@ -29,6 +30,13 @@ public class Main {
         System.out.println("Применена сортировка выбором: ");
         Sort d = new SelectionSort();
         d.sort(array);
+        
+        System.out.println();
+        System.out.println("Массив случайных чисел 3: ");
+        b.initialize(array);
+        System.out.println();
+        Sort f = new ShellSort();
+        f.sort(array);
         
         
        

@@ -30,22 +30,7 @@ public class BubbleSort implements Sort {
          for (int i = 0; i < array.length; i++){
             System.out.print(array[i] + " ");
         }
-        /*int a; //промежуточная переменная
-        char b = 0; // переменная проверки окончания цикла
-        int i = 0;
-        while (i < array.length){
-            if (array[i] > array[i + 1] && i + 1 != array.length) {
-                a = array[i];
-                array[i] = array[i + 1];
-                array[i + 1] = a;
-                b = 1;
-            }
-                i++;  
-            if (i == array.length && b == 1){
-                i = 0;
-                b = 0;
-            }
-        }*/
+       
         
         
         
