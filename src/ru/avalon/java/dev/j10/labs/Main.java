@@ -2,22 +2,35 @@ package ru.avalon.java.dev.j10.labs;
 import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
 import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
 import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
+import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
 
 public class Main {
 
     public static void main(String[] args) {
         int [] array = new int[20];
-       Initializer a = new FibonacciInitializer(); 
-       a.initialize(array);
-       System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
-       System.out.println();
-       System.out.println("Массив случайных чисел: ");
-       Initializer b = new RandomInitializer(-50, 50);
-       b.initialize(array);
-       System.out.println();
-       Sort c = new BubbleSort();
-       System.out.println("Применена пузырьковая сортировка: ");
-       c.sort(array);
+        
+        Initializer a = new FibonacciInitializer(); 
+        a.initialize(array);
+        System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
+        System.out.println();
+        
+        System.out.println("Массив случайных чисел 1: ");
+        Initializer b = new RandomInitializer(-50, 50);
+        b.initialize(array);
+        System.out.println();
+        Sort c = new BubbleSort();
+        System.out.println("Применена пузырьковая сортировка: ");
+        c.sort(array);
+        
+        System.out.println();
+        System.out.println("Массив случайных чисел 2: ");
+        b.initialize(array);
+        System.out.println();
+        System.out.println("Применена сортировка выбором: ");
+        Sort d = new SelectionSort();
+        d.sort(array);
+        
+        
        
        
 
