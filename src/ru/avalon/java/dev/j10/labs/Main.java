@@ -12,33 +12,42 @@ public class Main {
         
         Initializer a = new FibonacciInitializer(); 
         a.initialize(array);
+        getMassiv(array);
+        System.out.println();
         System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
         System.out.println();
         
         System.out.println("Массив случайных чисел 1: ");
         Initializer b = new RandomInitializer(-50, 50);
         b.initialize(array);
+        getMassiv(array);
         System.out.println();
         Sort c = new BubbleSort();
         System.out.println("Применена пузырьковая сортировка: ");
         c.sort(array);
+        getMassiv(array);
         
         System.out.println();
         System.out.println("Массив случайных чисел 2: ");
         b.initialize(array);
+        getMassiv(array);
         System.out.println();
         System.out.println("Применена сортировка выбором: ");
         Sort d = new SelectionSort();
         d.sort(array);
+        getMassiv(array);
         
         System.out.println();
         System.out.println("Массив случайных чисел 3: ");
         b.initialize(array);
+        getMassiv(array);
         System.out.println();
         System.out.println("Применена сортировка Shell: ");
         Sort f = new ShellSort();
         f.sort(array);
+        getMassiv(array);
         System.out.println();
+        
         
        
        
@@ -81,4 +90,8 @@ public class Main {
            }
            return sum;
        }
+    static public void getMassiv(int [] array){
+    for (int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");}
+    }
 }

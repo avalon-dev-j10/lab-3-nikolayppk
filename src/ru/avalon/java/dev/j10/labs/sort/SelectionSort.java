@@ -39,8 +39,7 @@ public class SelectionSort implements Sort {
             array[min_i] = tmp;
         }
      }
-        for (int i = 0; i < array.length; i++){
-            System.out.print(array[i] + " ");}
+        
         /*
          * TODO(Студент): Реализовать метод sort класса SelectionSort
          */

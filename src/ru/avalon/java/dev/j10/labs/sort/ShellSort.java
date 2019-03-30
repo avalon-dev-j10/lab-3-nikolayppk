@@ -49,8 +49,7 @@ public class ShellSort implements Sort {
       
       
    }   
-        for (int aa = 0; aa < array.length; aa++){
-            System.out.print(array[aa] + " ");}
+       
     
  
         /*
