@@ -35,9 +35,10 @@ public class Main {
         System.out.println("Массив случайных чисел 3: ");
         b.initialize(array);
         System.out.println();
+        System.out.println("Применена сортировка Shell: ");
         Sort f = new ShellSort();
         f.sort(array);
-        
+        System.out.println();
         
        
        
