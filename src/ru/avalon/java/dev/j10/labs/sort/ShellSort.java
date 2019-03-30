@@ -1,5 +1,8 @@
 package ru.avalon.java.dev.j10.labs.sort;
 
+
+
+
 import ru.avalon.java.dev.j10.labs.Sort;
 
 /**
@@ -20,9 +23,38 @@ public class ShellSort implements Sort {
     /**
      * {@inheritDoc}
      */
+    @Override
     public void sort(int[] array) {
+     int temp;
+       int h = 0;//величина интервала
+       
+       //вычисляем исходное значение интервала
+       while(h <= array.length/2)
+           h = 2*h + 1;
+       
+       for(int k = h; k > 0; k = (k-1)/2)
+           for(int i = k; i < array.length; i++)
+           {
+               temp = array[i];
+               int j;
+               for(j = i; j >= k; j -= k)
+               {
+                   if(temp < array[j - k])
+                       array[j] = array[j - k];
+                   else
+                       break;
+               }
+               array[j] = temp;
+    
+      
+      
+   }   
+       
+    
+ 
         /*
          * TODO(Студент): Реализовать метод sort класса ShellSort
          */
     }
+    
 }

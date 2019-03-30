@@ -1,9 +1,56 @@
 package ru.avalon.java.dev.j10.labs;
+import ru.avalon.java.dev.j10.labs.initialization.FibonacciInitializer;
+import ru.avalon.java.dev.j10.labs.initialization.RandomInitializer;
+import ru.avalon.java.dev.j10.labs.sort.BubbleSort;
+import ru.avalon.java.dev.j10.labs.sort.SelectionSort;
+import ru.avalon.java.dev.j10.labs.sort.ShellSort;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] array;
+        int [] array = new int[20];
+        
+        Initializer a = new FibonacciInitializer(); 
+        a.initialize(array);
+        getMassiv(array);
+        System.out.println();
+        System.out.println("Сумма Фибоначи массива[20] = " + getSum(array));
+        System.out.println();
+        
+        System.out.println("Массив случайных чисел 1: ");
+        Initializer b = new RandomInitializer(-50, 50);
+        b.initialize(array);
+        getMassiv(array);
+        System.out.println();
+        Sort c = new BubbleSort();
+        System.out.println("Применена пузырьковая сортировка: ");
+        c.sort(array);
+        getMassiv(array);
+        
+        System.out.println();
+        System.out.println("Массив случайных чисел 2: ");
+        b.initialize(array);
+        getMassiv(array);
+        System.out.println();
+        System.out.println("Применена сортировка выбором: ");
+        Sort d = new SelectionSort();
+        d.sort(array);
+        getMassiv(array);
+        
+        System.out.println();
+        System.out.println("Массив случайных чисел 3: ");
+        b.initialize(array);
+        getMassiv(array);
+        System.out.println();
+        System.out.println("Применена сортировка Shell: ");
+        Sort f = new ShellSort();
+        f.sort(array);
+        getMassiv(array);
+        System.out.println();
+        
+        
+       
+       
 
 	    /*
 	     * TODO(Студент): Выполнить действия над массивом чисел
@@ -34,5 +81,17 @@ public class Main {
          * 8. Отсортировать массив с использованием
          *    сортировки Шелла.
 	     */
+    }
+    // Вычисление суммы элементов массива:
+    static public int getSum(int[] array){
+          int sum = 0;
+           for (int i = 0; i < array.length; i++){
+           sum += array[i]; 
+           }
+           return sum;
+       }
+    static public void getMassiv(int [] array){
+    for (int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");}
     }
 }
